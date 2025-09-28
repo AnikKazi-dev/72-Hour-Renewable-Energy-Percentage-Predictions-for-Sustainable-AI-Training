@@ -1,0 +1,40 @@
+Model: "model_36"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_32 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ conv1d_49 (Conv1D)          (None, 72, 64)               256       ['input_32[0][0]']            
+                                                                                                  
+ batch_normalization_29 (Ba  (None, 72, 64)               256       ['conv1d_49[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ dropout_82 (Dropout)        (None, 72, 64)               0         ['batch_normalization_29[0][0]
+                                                                    ']                            
+                                                                                                  
+ bidirectional_28 (Bidirect  (None, 72, 128)              66048     ['dropout_82[0][0]']          
+ ional)                                                                                           
+                                                                                                  
+ bidirectional_30 (Bidirect  (None, 72, 128)              33792     ['input_32[0][0]']            
+ ional)                                                                                           
+                                                                                                  
+ bidirectional_29 (Bidirect  (None, 128)                  98816     ['bidirectional_28[0][0]']    
+ ional)                                                                                           
+                                                                                                  
+ bidirectional_31 (Bidirect  (None, 128)                  98816     ['bidirectional_30[0][0]']    
+ ional)                                                                                           
+                                                                                                  
+ concatenate_3 (Concatenate  (None, 256)                  0         ['bidirectional_29[0][0]',    
+ )                                                                   'bidirectional_31[0][0]']    
+                                                                                                  
+ dense_73 (Dense)            (None, 100)                  25700     ['concatenate_3[0][0]']       
+                                                                                                  
+ dropout_83 (Dropout)        (None, 100)                  0         ['dense_73[0][0]']            
+                                                                                                  
+ dense_74 (Dense)            (None, 72)                   7272      ['dropout_83[0][0]']          
+                                                                                                  
+==================================================================================================
+Total params: 330956 (1.26 MB)
+Trainable params: 330828 (1.26 MB)
+Non-trainable params: 128 (512.00 Byte)
+__________________________________________________________________________________________________

@@ -1,0 +1,4 @@
+Model: Robust_Improved_Hybrid_Model_v2
+Country/Season: HU/winter
+Context last value: 14.00 | Forecast first: -4.26 | last: -4.90
+Forecast mean±std: 3.66 ± 10.52

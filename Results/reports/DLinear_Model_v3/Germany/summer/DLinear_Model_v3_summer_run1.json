@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\DLinear_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\DLinear_Model_v3\\summer\\training_loss_plot_summer_dlinear_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\DLinear_Model_v3\\summer\\forecast_examples_summer_dlinear_v3.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 11.768338662541888,
+    "mse": 192.8030401548605,
+    "rmse": 13.885353440041074,
+    "mape": 0.1898060375489329
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\DLinear_Model_v3\\summer\\DLinear_Model_v3_summer_run1_emissions.csv"
+}

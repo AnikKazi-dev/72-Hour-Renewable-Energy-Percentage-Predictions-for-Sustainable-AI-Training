@@ -1,0 +1,4 @@
+Model: Transformer_Model
+Country/Season: DK/winter
+Context last value: 66.00 | Forecast first: 56.38 | last: 128.96
+Forecast mean±std: 132.12 ± 21.70

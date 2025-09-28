@@ -1,0 +1,85 @@
+Model: "model_5"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_6 (InputLayer)        [(None, 72, 1)]              0         []                            
+                                                                                                  
+ token_and_position_embeddi  (None, 72, 64)               4736      ['input_6[0][0]']             
+ ng_3 (TokenAndPositionEmbe                                                                       
+ dding)                                                                                           
+                                                                                                  
+ layer_normalization_24 (La  (None, 72, 64)               128       ['token_and_position_embedding
+ yerNormalization)                                                  _3[0][0]']                    
+                                                                                                  
+ auto_correlation_12 (AutoC  (None, 72, 64)               0         ['layer_normalization_24[0][0]
+ orrelation)                                                        ',                            
+                                                                     'layer_normalization_24[0][0]
+                                                                    ',                            
+                                                                     'layer_normalization_24[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_29 (Dropout)        (None, 72, 64)               0         ['auto_correlation_12[0][0]'] 
+                                                                                                  
+ tf.__operators__.add_24 (T  (None, 72, 64)               0         ['dropout_29[0][0]',          
+ FOpLambda)                                                          'token_and_position_embedding
+                                                                    _3[0][0]']                    
+                                                                                                  
+ layer_normalization_25 (La  (None, 72, 64)               128       ['tf.__operators__.add_24[0][0
+ yerNormalization)                                                  ]']                           
+                                                                                                  
+ conv1d_24 (Conv1D)          (None, 72, 4)                260       ['layer_normalization_25[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_30 (Dropout)        (None, 72, 4)                0         ['conv1d_24[0][0]']           
+                                                                                                  
+ conv1d_25 (Conv1D)          (None, 72, 64)               320       ['dropout_30[0][0]']          
+                                                                                                  
+ tf.__operators__.add_25 (T  (None, 72, 64)               0         ['conv1d_25[0][0]',           
+ FOpLambda)                                                          'tf.__operators__.add_24[0][0
+                                                                    ]']                           
+                                                                                                  
+ layer_normalization_26 (La  (None, 72, 64)               128       ['tf.__operators__.add_25[0][0
+ yerNormalization)                                                  ]']                           
+                                                                                                  
+ auto_correlation_13 (AutoC  (None, 72, 64)               0         ['layer_normalization_26[0][0]
+ orrelation)                                                        ',                            
+                                                                     'layer_normalization_26[0][0]
+                                                                    ',                            
+                                                                     'layer_normalization_26[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_31 (Dropout)        (None, 72, 64)               0         ['auto_correlation_13[0][0]'] 
+                                                                                                  
+ tf.__operators__.add_26 (T  (None, 72, 64)               0         ['dropout_31[0][0]',          
+ FOpLambda)                                                          'tf.__operators__.add_25[0][0
+                                                                    ]']                           
+                                                                                                  
+ layer_normalization_27 (La  (None, 72, 64)               128       ['tf.__operators__.add_26[0][0
+ yerNormalization)                                                  ]']                           
+                                                                                                  
+ conv1d_26 (Conv1D)          (None, 72, 4)                260       ['layer_normalization_27[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_32 (Dropout)        (None, 72, 4)                0         ['conv1d_26[0][0]']           
+                                                                                                  
+ conv1d_27 (Conv1D)          (None, 72, 64)               320       ['dropout_32[0][0]']          
+                                                                                                  
+ tf.__operators__.add_27 (T  (None, 72, 64)               0         ['conv1d_27[0][0]',           
+ FOpLambda)                                                          'tf.__operators__.add_26[0][0
+                                                                    ]']                           
+                                                                                                  
+ global_average_pooling1d_5  (None, 64)                   0         ['tf.__operators__.add_27[0][0
+  (GlobalAveragePooling1D)                                          ]']                           
+                                                                                                  
+ dense_16 (Dense)            (None, 64)                   4160      ['global_average_pooling1d_5[0
+                                                                    ][0]']                        
+                                                                                                  
+ dropout_33 (Dropout)        (None, 64)                   0         ['dense_16[0][0]']            
+                                                                                                  
+ dense_17 (Dense)            (None, 72)                   4680      ['dropout_33[0][0]']          
+                                                                                                  
+==================================================================================================
+Total params: 15248 (59.56 KB)
+Trainable params: 15248 (59.56 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

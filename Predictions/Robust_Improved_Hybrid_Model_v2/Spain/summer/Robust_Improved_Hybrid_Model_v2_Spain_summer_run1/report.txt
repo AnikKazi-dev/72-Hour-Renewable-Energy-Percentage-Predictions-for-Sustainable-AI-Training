@@ -1,0 +1,4 @@
+Model: Robust_Improved_Hybrid_Model_v2
+Country/Season: ES/summer
+Context last value: 67.00 | Forecast first: 45.47 | last: 37.07
+Forecast mean±std: 19.05 ± 15.27

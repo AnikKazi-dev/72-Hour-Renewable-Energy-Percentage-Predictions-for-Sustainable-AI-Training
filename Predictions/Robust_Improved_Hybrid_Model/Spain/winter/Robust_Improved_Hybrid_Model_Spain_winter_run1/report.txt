@@ -1,0 +1,4 @@
+Model: Robust_Improved_Hybrid_Model
+Country/Season: ES/winter
+Context last value: 51.00 | Forecast first: 74.97 | last: 3.45
+Forecast mean±std: 48.94 ± 39.45

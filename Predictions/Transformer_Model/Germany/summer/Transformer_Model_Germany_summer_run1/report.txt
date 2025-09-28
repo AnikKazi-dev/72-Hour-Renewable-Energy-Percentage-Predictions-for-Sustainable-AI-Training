@@ -1,0 +1,4 @@
+Model: Transformer_Model
+Country/Season: DE/summer
+Context last value: 85.00 | Forecast first: 83.11 | last: 109.26
+Forecast mean±std: 73.75 ± 16.70

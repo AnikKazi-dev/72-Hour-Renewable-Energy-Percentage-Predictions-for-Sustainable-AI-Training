@@ -1,0 +1,17 @@
+{
+  "model": "Transformer",
+  "season": "Winter",
+  "params": {
+    "look_back": 72,
+    "horizon": 72,
+    "features": 1,
+    "total_params": 47376
+  },
+  "metrics": {
+    "mae": 6.640639463001913,
+    "mse": 76.67972232919234,
+    "rmse": 8.756695856839631,
+    "mape": 0.1343498494023609,
+    "r2": 0.4889535211216224
+  }
+}

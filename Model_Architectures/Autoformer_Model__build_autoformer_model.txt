@@ -1,0 +1,80 @@
+Model: "model_1"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_2 (InputLayer)        [(None, 72, 1)]              0         []                            
+                                                                                                  
+ dense_3 (Dense)             (None, 72, 64)               128       ['input_2[0][0]']             
+                                                                                                  
+ layer_normalization_6 (Lay  (None, 72, 64)               128       ['dense_3[0][0]']             
+ erNormalization)                                                                                 
+                                                                                                  
+ auto_correlation_3 (AutoCo  (None, 72, 64)               4096      ['layer_normalization_6[0][0]'
+ rrelation)                                                         , 'layer_normalization_6[0][0]
+                                                                    ',                            
+                                                                     'layer_normalization_6[0][0]'
+                                                                    ]                             
+                                                                                                  
+ dropout_7 (Dropout)         (None, 72, 64)               0         ['auto_correlation_3[0][0]']  
+                                                                                                  
+ tf.__operators__.add_6 (TF  (None, 72, 64)               0         ['dropout_7[0][0]',           
+ OpLambda)                                                           'dense_3[0][0]']             
+                                                                                                  
+ layer_normalization_7 (Lay  (None, 72, 64)               128       ['tf.__operators__.add_6[0][0]
+ erNormalization)                                                   ']                            
+                                                                                                  
+ conv1d_6 (Conv1D)           (None, 72, 4)                260       ['layer_normalization_7[0][0]'
+                                                                    ]                             
+                                                                                                  
+ dropout_8 (Dropout)         (None, 72, 4)                0         ['conv1d_6[0][0]']            
+                                                                                                  
+ conv1d_7 (Conv1D)           (None, 72, 64)               320       ['dropout_8[0][0]']           
+                                                                                                  
+ tf.__operators__.add_7 (TF  (None, 72, 64)               0         ['conv1d_7[0][0]',            
+ OpLambda)                                                           'tf.__operators__.add_6[0][0]
+                                                                    ']                            
+                                                                                                  
+ layer_normalization_8 (Lay  (None, 72, 64)               128       ['tf.__operators__.add_7[0][0]
+ erNormalization)                                                   ']                            
+                                                                                                  
+ auto_correlation_4 (AutoCo  (None, 72, 64)               4096      ['layer_normalization_8[0][0]'
+ rrelation)                                                         , 'layer_normalization_8[0][0]
+                                                                    ',                            
+                                                                     'layer_normalization_8[0][0]'
+                                                                    ]                             
+                                                                                                  
+ dropout_9 (Dropout)         (None, 72, 64)               0         ['auto_correlation_4[0][0]']  
+                                                                                                  
+ tf.__operators__.add_8 (TF  (None, 72, 64)               0         ['dropout_9[0][0]',           
+ OpLambda)                                                           'tf.__operators__.add_7[0][0]
+                                                                    ']                            
+                                                                                                  
+ layer_normalization_9 (Lay  (None, 72, 64)               128       ['tf.__operators__.add_8[0][0]
+ erNormalization)                                                   ']                            
+                                                                                                  
+ conv1d_8 (Conv1D)           (None, 72, 4)                260       ['layer_normalization_9[0][0]'
+                                                                    ]                             
+                                                                                                  
+ dropout_10 (Dropout)        (None, 72, 4)                0         ['conv1d_8[0][0]']            
+                                                                                                  
+ conv1d_9 (Conv1D)           (None, 72, 64)               320       ['dropout_10[0][0]']          
+                                                                                                  
+ tf.__operators__.add_9 (TF  (None, 72, 64)               0         ['conv1d_9[0][0]',            
+ OpLambda)                                                           'tf.__operators__.add_8[0][0]
+                                                                    ']                            
+                                                                                                  
+ global_average_pooling1d_1  (None, 64)                   0         ['tf.__operators__.add_9[0][0]
+  (GlobalAveragePooling1D)                                          ']                            
+                                                                                                  
+ dense_4 (Dense)             (None, 64)                   4160      ['global_average_pooling1d_1[0
+                                                                    ][0]']                        
+                                                                                                  
+ dropout_11 (Dropout)        (None, 64)                   0         ['dense_4[0][0]']             
+                                                                                                  
+ dense_5 (Dense)             (None, 72)                   4680      ['dropout_11[0][0]']          
+                                                                                                  
+==================================================================================================
+Total params: 18832 (73.56 KB)
+Trainable params: 18832 (73.56 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

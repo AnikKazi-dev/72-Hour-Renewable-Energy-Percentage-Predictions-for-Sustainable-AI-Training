@@ -1,0 +1,50 @@
+Model: "model_44"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_40 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ conv1d_57 (Conv1D)          (None, 72, 128)              512       ['input_40[0][0]']            
+                                                                                                  
+ batch_normalization_40 (Ba  (None, 72, 128)              512       ['conv1d_57[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ dropout_101 (Dropout)       (None, 72, 128)              0         ['batch_normalization_40[0][0]
+                                                                    ']                            
+                                                                                                  
+ bidirectional_43 (Bidirect  (None, 72, 128)              263168    ['dropout_101[0][0]']         
+ ional)                                                                                           
+                                                                                                  
+ multi_head_attention_3 (Mu  (None, 72, 128)              263808    ['bidirectional_43[0][0]',    
+ ltiHeadAttention)                                                   'bidirectional_43[0][0]']    
+                                                                                                  
+ add_12 (Add)                (None, 72, 128)              0         ['bidirectional_43[0][0]',    
+                                                                     'multi_head_attention_3[0][0]
+                                                                    ']                            
+                                                                                                  
+ layer_normalization_31 (La  (None, 72, 128)              256       ['add_12[0][0]']              
+ yerNormalization)                                                                                
+                                                                                                  
+ global_average_pooling1d_1  (None, 128)                  0         ['layer_normalization_31[0][0]
+ 1 (GlobalAveragePooling1D)                                         ']                            
+                                                                                                  
+ dense_94 (Dense)            (None, 256)                  33024     ['global_average_pooling1d_11[
+                                                                    0][0]']                       
+                                                                                                  
+ batch_normalization_41 (Ba  (None, 256)                  1024      ['dense_94[0][0]']            
+ tchNormalization)                                                                                
+                                                                                                  
+ dropout_102 (Dropout)       (None, 256)                  0         ['batch_normalization_41[0][0]
+                                                                    ']                            
+                                                                                                  
+ dense_95 (Dense)            (None, 128)                  32896     ['dropout_102[0][0]']         
+                                                                                                  
+ dropout_103 (Dropout)       (None, 128)                  0         ['dense_95[0][0]']            
+                                                                                                  
+ dense_96 (Dense)            (None, 72)                   9288      ['dropout_103[0][0]']         
+                                                                                                  
+==================================================================================================
+Total params: 604488 (2.31 MB)
+Trainable params: 603720 (2.30 MB)
+Non-trainable params: 768 (3.00 KB)
+__________________________________________________________________________________________________

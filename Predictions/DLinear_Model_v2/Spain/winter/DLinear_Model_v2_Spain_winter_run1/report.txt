@@ -1,0 +1,4 @@
+Model: DLinear_Model_v2
+Country/Season: ES/winter
+Context last value: 51.00 | Forecast first: 50.59 | last: 33.77
+Forecast mean±std: 44.38 ± 6.27

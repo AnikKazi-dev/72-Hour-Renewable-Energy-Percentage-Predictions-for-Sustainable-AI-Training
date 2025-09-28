@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Transformer_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Transformer_Model_v3\\Denmark\\summer\\training_loss_plot_summer_transformer_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Transformer_Model_v3\\Denmark\\summer\\forecast_examples_summer_transformer_v3.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 7.2812683765277715,
+    "mse": 76.18040237044994,
+    "rmse": 8.728138539829093,
+    "mape": 0.08660813745865747
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Transformer_Model_v3\\Denmark\\summer\\Transformer_Model_v3_Denmark_summer_run1_emissions.csv"
+}

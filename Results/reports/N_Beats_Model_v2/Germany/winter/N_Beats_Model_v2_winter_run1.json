@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\N_Beats_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\N_Beats_Model_v2\\winter\\training_loss_plot_winter_nbeats_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\N_Beats_Model_v2\\winter\\forecast_examples_winter_nbeats_v2.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 11.76306798592952,
+    "mse": 220.62696462616998,
+    "rmse": 14.853516911027166,
+    "mape": 0.25061158435313535
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\N_Beats_Model_v2\\winter\\N_Beats_Model_v2_winter_run1_emissions.csv"
+}

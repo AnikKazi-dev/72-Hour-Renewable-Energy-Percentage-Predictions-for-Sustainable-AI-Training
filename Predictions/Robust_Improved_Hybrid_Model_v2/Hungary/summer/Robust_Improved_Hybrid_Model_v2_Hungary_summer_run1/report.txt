@@ -1,0 +1,4 @@
+Model: Robust_Improved_Hybrid_Model_v2
+Country/Season: HU/summer
+Context last value: 60.00 | Forecast first: 38.47 | last: 34.58
+Forecast mean±std: 6.86 ± 21.72

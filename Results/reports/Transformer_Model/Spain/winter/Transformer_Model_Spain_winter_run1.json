@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Transformer_Model.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Transformer_Model\\Spain\\winter\\training_loss_plot_winter_transformer.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Transformer_Model\\Spain\\winter\\forecast_examples_winter_transformer.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 6.640639463001913,
+    "mse": 76.67972232919234,
+    "rmse": 8.756695856839631,
+    "mape": 0.1343498494023609
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Transformer_Model\\Spain\\winter\\Transformer_Model_Spain_winter_run1_emissions.csv"
+}

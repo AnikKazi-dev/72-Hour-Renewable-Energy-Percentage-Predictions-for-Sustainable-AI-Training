@@ -1,0 +1,220 @@
+% Conference Paper Template (Overleaf-ready)
+% Derived from repository Markdown summaries and benchmark artifacts
+\documentclass[10pt,conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% -- Packages --
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\usepackage{siunitx}
+\sisetup{round-mode=places,round-precision=3}
+
+% -- Metadata --
+\title{Low-Carbon Forecasting of National Electricity Demand: A Benchmark Across 41 Models, 4 Countries, and 2 Seasons}
+
+\author{%
+  \IEEEauthorblockN{First Last}\IEEEauthorblockA{Affiliation\\ email@example.com}
+  \and
+  \IEEEauthorblockN{First Last}\IEEEauthorblockA{Affiliation\\ email@example.com}
+  \and
+  \IEEEauthorblockN{First Last}\IEEEauthorblockA{Affiliation\\ email@example.com}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We benchmark 41 forecasting models across Denmark, Germany, Hungary, and Spain in summer and winter, tracking carbon emissions with CodeCarbon. We find weak coupling between accuracy and emissions, with many low-emission models achieving state-of-the-art MAE. We provide practical, low-carbon defaults and discuss trade-offs.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Time series forecasting, energy demand, carbon accounting, CodeCarbon, benchmarking, sustainability
+\end{IEEEkeywords}
+
+\section{Introduction}
+% Source: Introduction.md + Benchmark.md
+% TODO: Summarize motivation and contributions
+Electricity demand forecasting supports grid stability and planning. Training modern models can be carbon-intensive. We quantify both accuracy and emissions across diverse model families and seasons.
+\begin{itemize}
+  \item Contribution 1: Joint evaluation of accuracy and emissions across 41 models.
+  \item Contribution 2: Public aggregation pipeline and artifacts for reproducibility.
+  \item Contribution 3: Low-carbon defaults with minimal accuracy sacrifice.
+\end{itemize}
+
+\section{Related Work}
+% TODO: Cite work on carbon-aware ML and energy forecasting
+\cite{lacoste2019quantifying,henderson2020systematic}
+
+\section{Data}
+% Source: Data/ and Season.md
+We use 5-year hourly demand data for four European countries with summer and winter subsets. See repository Data/ for CSVs.
+
+\section{Models}
+% Source: ModelDescription.md and Model Comparison.md
+We include classical and neural architectures (DLinear, CNN-LSTM, Cycle-LSTM, Transformers including Informer and PatchTST, N-BEATS, Autoformer, TFT, Mamba, and hybrids). Hyperparameters follow repository defaults.
+
+\section{Experimental Setup}
+% Source: README and scripts/benchmark.py
+We run each model across country-season combinations using a Python orchestrator. CodeCarbon tracks per-run emissions (kg CO\textsubscript{2}e), energy (kWh), and duration (s).
+
+\subsection{Metrics}
+We report MAE, RMSE, MSE, $R^2$, and MAPE. Aggregations are saved to metrics\_aggregated.csv and emissions\_aggregated.csv.
+
+\subsection{Reproducibility}
+% Windows PowerShell commands (from Benchmark.md)
+% Optional: include in appendix in final version.
+
+\section{Results}
+\subsection{Accuracy}
+% Placeholder table summarizing best/worst and means per slice
+\begin{table}[t]
+  \centering
+  \caption{MAE summary by country and season (best/worst/size).}
+  \label{tab:mae_summary}
+  % Generated from metrics\_aggregated.csv by Paper/generate\_tables.py
+  \input{generated/mae_summary.tex}
+\end{table}
+
+\subsection{Emissions}
+Most runs emit $\leq$ \SI{0.10}{kg} CO\textsubscript{2}e; a few outliers (e.g., Transformer v3 variants) reach \SIrange{0.6}{1.0}{kg}. See Figure~\ref{fig:emissions_boxplots}.
+
+\subsection{Accuracy--Emissions Trade-off}
+Pearson $\rho$(MAE, emissions) $\approx 0.112$. Many low-emission runs lie on or near the Pareto frontier. See Figure~\ref{fig:tradeoff}.
+
+\section{Discussion}
+Low-emission families (DLinear, CNN-LSTM, Robust Hybrid, Cycle-LSTM) often match or beat higher-emission models. A soft emission cap of \SI{0.10}{kg} per training filters dominated configurations without hurting accuracy.
+
+\section{Recommendations}
+Default picks by slice: Denmark (Robust Hybrid v2), Germany (Cycle-LSTM v2), Hungary (DLinear/Robust Hybrid), Spain (DLinear v2). Avoid high-emission Transformer v3 for routine runs.
+
+\section{Limitations and Future Work}
+We observed a Germany-winter count anomaly (N=42). Future work: Pareto front tables per slice, uncertainty intervals, family-level emission summaries.
+
+\section{Conclusion}
+Accuracy and carbon efficiency need not be in tension. Our benchmark and pipeline surface low-carbon choices with competitive MAE.
+
+\section*{Acknowledgments}
+% Optional acknowledgments
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{../Results/Benchmark/boxplot_emissions_all_models.png}
+  \caption{Emissions distribution across models.}
+  \label{fig:emissions_boxplots}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{../Results/Benchmark/tradeoff_mae_vs_emissions.png}
+  \caption{MAE vs Emissions trade-off.}
+  \label{fig:tradeoff}
+\end{figure}
+
+% Additional figures: Emissions by country (grid)
+\begin{figure*}[t]
+  \centering
+  \subfloat[Denmark]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/boxplot_emissions_Denmark.png}}\hfill
+  \subfloat[Germany]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/boxplot_emissions_Germany.png}}\\
+  \subfloat[Hungary]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/boxplot_emissions_Hungary.png}}\hfill
+  \subfloat[Spain]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/boxplot_emissions_Spain.png}}
+  \caption{Per-country emissions distributions across models.}
+  \label{fig:per_country_emissions}
+\end{figure*}
+
+% Additional figures: Heatmaps and Top-10 leaderboard
+\begin{figure*}[t]
+  \centering
+  \subfloat[Mean MAE (summer)]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/heatmap_mean_mae_summer.png}}\hfill
+  \subfloat[Mean MAE (winter)]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/heatmap_mean_mae_winter.png}}
+  \caption{Heatmaps of mean MAE by model and country.}
+  \label{fig:heatmaps_mae}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \subfloat[Mean emissions (summer)]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/heatmap_mean_emissions_summer.png}}\hfill
+  \subfloat[Mean emissions (winter)]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/heatmap_mean_emissions_winter.png}}
+  \caption{Heatmaps of mean emissions (kg CO\textsubscript{2}e) by model and country.}
+  \label{fig:heatmaps_emissions}
+\end{figure*}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\linewidth]{../Results/Benchmark/top10_mae.png}
+  \caption{Global Top-10 MAE leaderboard across slices.}
+  \label{fig:top10_mae}
+\end{figure}
+
+% Low-carbon leaders table (generated)
+\begin{table}[t]
+  \centering
+  \caption{Low-carbon leaders (best MAE with emissions $\leq$ 0.10 kg CO\textsubscript{2}e) by slice.}
+  \label{tab:low_carbon_leaders}
+  % Generated by Paper/generate\_tables.py using emissions\_aggregated.csv
+  \input{generated/low_carbon_leaders.tex}
+\end{table}
+
+% Pareto leaders table (generated)
+\begin{table}[t]
+  \centering
+  \caption{Pareto leaders by slice (minimizing MAE and emissions).}
+  \label{tab:pareto_leaders}
+  \input{generated/pareto_leaders.tex}
+\end{table}
+
+% Top-10 per-slice (regular table* for two-column IEEEtran)
+\begin{table*}[t]
+  \centering
+  \caption{Top-10 MAE models per slice (averaged over runs).}
+  \label{tab:top10_mae_by_slice}
+  \small
+  \input{generated/top10_mae_by_slice_tabular.tex}
+\end{table*}
+
+% Per-country Top-10 figures (grid)
+\begin{figure*}[t]
+  \centering
+  \subfloat[Denmark Summer]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/top10_mae_Denmark_summer.png}}\hfill
+  \subfloat[Denmark Winter]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/top10_mae_Denmark_winter.png}}\\
+  \subfloat[Germany Summer]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/top10_mae_Germany_summer.png}}\hfill
+  \subfloat[Germany Winter]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/top10_mae_Germany_winter.png}}\\
+  \subfloat[Hungary Summer]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/top10_mae_Hungary_summer.png}}\hfill
+  \subfloat[Hungary Winter]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/top10_mae_Hungary_winter.png}}\\
+  \subfloat[Spain Summer]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/top10_mae_Spain_summer.png}}\hfill
+  \subfloat[Spain Winter]{\includegraphics[width=0.48\textwidth]{../Results/Benchmark/top10_mae_Spain_winter.png}}
+  \caption{Per-slice Top-10 MAE leaderboards.}
+  \label{fig:per_country_top10}
+\end{figure*}
+
+% -- Bibliography --
+  \appendices
+  \section{Reproducibility Commands (Windows PowerShell)}
+  Run orchestrations and regenerate benchmark artifacts.
+  \begin{verbatim}
+  # Full run (both seasons, 4 countries, repeat each twice)
+  python .\main.py --season both --countries DE,DK,ES,HU --repeat 2
+
+  # Quick smoke test for DLinear family (summer)
+  python .\main.py --season summer --filter DLinear --quick --countries DE,DK,ES,HU
+
+  # Aggregate and plot
+  python -m scripts.benchmark
+
+  # Regenerate LaTeX tables for the paper
+  python .\Paper\generate_tables.py
+  \end{verbatim}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,218 @@
+[
+  {
+    "model": "Robust_Improved_Hybrid_Model.py",
+    "season": "summer",
+    "country_code": "DE",
+    "country": "Germany",
+    "run_name": "Robust_Improved_Hybrid_Model_Germany_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "summer",
+    "country_code": "DE",
+    "country": "Germany",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Germany_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Transformer_Model.py",
+    "season": "summer",
+    "country_code": "DE",
+    "country": "Germany",
+    "run_name": "Transformer_Model_Germany_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model.py",
+    "season": "summer",
+    "country_code": "DK",
+    "country": "Denmark",
+    "run_name": "Robust_Improved_Hybrid_Model_Denmark_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "summer",
+    "country_code": "DK",
+    "country": "Denmark",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Denmark_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Transformer_Model.py",
+    "season": "summer",
+    "country_code": "DK",
+    "country": "Denmark",
+    "run_name": "Transformer_Model_Denmark_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model.py",
+    "season": "summer",
+    "country_code": "ES",
+    "country": "Spain",
+    "run_name": "Robust_Improved_Hybrid_Model_Spain_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "summer",
+    "country_code": "ES",
+    "country": "Spain",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Spain_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Transformer_Model.py",
+    "season": "summer",
+    "country_code": "ES",
+    "country": "Spain",
+    "run_name": "Transformer_Model_Spain_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model.py",
+    "season": "summer",
+    "country_code": "HU",
+    "country": "Hungary",
+    "run_name": "Robust_Improved_Hybrid_Model_Hungary_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "summer",
+    "country_code": "HU",
+    "country": "Hungary",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Hungary_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Transformer_Model.py",
+    "season": "summer",
+    "country_code": "HU",
+    "country": "Hungary",
+    "run_name": "Transformer_Model_Hungary_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model.py",
+    "season": "winter",
+    "country_code": "DE",
+    "country": "Germany",
+    "run_name": "Robust_Improved_Hybrid_Model_Germany_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "winter",
+    "country_code": "DE",
+    "country": "Germany",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Germany_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Transformer_Model.py",
+    "season": "winter",
+    "country_code": "DE",
+    "country": "Germany",
+    "run_name": "Transformer_Model_Germany_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model.py",
+    "season": "winter",
+    "country_code": "DK",
+    "country": "Denmark",
+    "run_name": "Robust_Improved_Hybrid_Model_Denmark_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "winter",
+    "country_code": "DK",
+    "country": "Denmark",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Denmark_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Transformer_Model.py",
+    "season": "winter",
+    "country_code": "DK",
+    "country": "Denmark",
+    "run_name": "Transformer_Model_Denmark_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model.py",
+    "season": "winter",
+    "country_code": "ES",
+    "country": "Spain",
+    "run_name": "Robust_Improved_Hybrid_Model_Spain_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "winter",
+    "country_code": "ES",
+    "country": "Spain",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Spain_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Transformer_Model.py",
+    "season": "winter",
+    "country_code": "ES",
+    "country": "Spain",
+    "run_name": "Transformer_Model_Spain_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model.py",
+    "season": "winter",
+    "country_code": "HU",
+    "country": "Hungary",
+    "run_name": "Robust_Improved_Hybrid_Model_Hungary_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "winter",
+    "country_code": "HU",
+    "country": "Hungary",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Hungary_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  },
+  {
+    "model": "Transformer_Model.py",
+    "season": "winter",
+    "country_code": "HU",
+    "country": "Hungary",
+    "run_name": "Transformer_Model_Hungary_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  }
+]

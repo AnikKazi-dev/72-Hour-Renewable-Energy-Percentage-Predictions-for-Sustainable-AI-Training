@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Informer_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Informer_Model_v2\\summer\\training_loss_plot_summer_informer_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Informer_Model_v2\\summer\\forecast_examples_summer_informer_v2.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 9.671441498663082,
+    "mse": 153.9275936397613,
+    "rmse": 12.40675596760738,
+    "mape": 0.16409739971706805
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Informer_Model_v2\\summer\\Informer_Model_v2_summer_run1_emissions.csv"
+}

@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Temporal_Fusion_Transformer_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Temporal_Fusion_Transformer_Model_v3\\Hungary\\summer\\training_loss_plot_summer_tft_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Temporal_Fusion_Transformer_Model_v3\\Hungary\\summer\\forecast_examples_summer_tft_v3.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 7.231869951497818,
+    "mse": 102.61084201994564,
+    "rmse": 10.12970098373815,
+    "mape": 0.2694343272485961
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Temporal_Fusion_Transformer_Model_v3\\Hungary\\summer\\Temporal_Fusion_Transformer_Model_v3_Hungary_summer_run1_emissions.csv"
+}

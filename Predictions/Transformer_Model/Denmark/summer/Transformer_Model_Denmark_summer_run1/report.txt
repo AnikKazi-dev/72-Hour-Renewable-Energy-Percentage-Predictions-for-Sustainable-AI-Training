@@ -1,0 +1,4 @@
+Model: Transformer_Model
+Country/Season: DK/summer
+Context last value: 92.50 | Forecast first: 99.88 | last: 91.77
+Forecast mean±std: 100.90 ± 9.55

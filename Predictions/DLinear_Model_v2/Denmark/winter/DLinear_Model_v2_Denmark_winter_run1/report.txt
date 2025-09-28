@@ -1,0 +1,4 @@
+Model: DLinear_Model_v2
+Country/Season: DK/winter
+Context last value: 66.00 | Forecast first: 65.37 | last: 29.31
+Forecast mean±std: 41.45 ± 11.00

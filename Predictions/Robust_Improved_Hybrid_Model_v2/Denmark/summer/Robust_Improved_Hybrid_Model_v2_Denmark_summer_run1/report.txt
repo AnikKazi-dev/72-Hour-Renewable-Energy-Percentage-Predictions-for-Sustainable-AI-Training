@@ -1,0 +1,4 @@
+Model: Robust_Improved_Hybrid_Model_v2
+Country/Season: DK/summer
+Context last value: 92.50 | Forecast first: 87.09 | last: 52.35
+Forecast mean±std: 55.01 ± 9.18

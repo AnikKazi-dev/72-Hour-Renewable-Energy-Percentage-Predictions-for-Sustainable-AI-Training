@@ -1,0 +1,4 @@
+Model: Robust_Improved_Hybrid_Model
+Country/Season: DK/winter
+Context last value: 66.00 | Forecast first: 117.88 | last: 0.84
+Forecast mean±std: 63.70 ± 49.26

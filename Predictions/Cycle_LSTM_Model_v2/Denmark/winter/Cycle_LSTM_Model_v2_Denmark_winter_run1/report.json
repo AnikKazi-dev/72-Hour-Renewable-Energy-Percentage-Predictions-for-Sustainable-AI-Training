@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2025-09-22T20:10:45.970784+00:00",
+  "country": "DK",
+  "season": "winter",
+  "model": "Cycle_LSTM_Model_v2",
+  "context_hours": 72,
+  "forecast_hours": 72,
+  "context_stats": {
+    "last_value": 66.0,
+    "mean": 82.19444444444444,
+    "std": 9.187308409021062,
+    "min": 63.0,
+    "max": 93.0
+  },
+  "forecast_stats": {
+    "first": 4.162744045257568,
+    "last": 2.647116184234619,
+    "mean": 3.385845899581909,
+    "std": 0.5533336997032166,
+    "min": 2.1766204833984375,
+    "max": 4.240650177001953
+  },
+  "delta_first_vs_last_context": -61.83725595474243,
+  "delta_last_vs_last_context": -63.35288381576538,
+  "data_source": "CSV fallback"
+}

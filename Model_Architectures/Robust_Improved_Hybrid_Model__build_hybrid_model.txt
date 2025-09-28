@@ -1,0 +1,112 @@
+Model: "RobustImprovedHybrid"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_60 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ conv1d_137 (Conv1D)         (None, 72, 32)               64        ['input_60[0][0]']            
+                                                                                                  
+ layer_normalization_104 (L  (None, 72, 32)               64        ['conv1d_137[0][0]']          
+ ayerNormalization)                                                                               
+                                                                                                  
+ multi_head_attention_34 (M  (None, 72, 32)               16800     ['layer_normalization_104[0][0
+ ultiHeadAttention)                                                 ]',                           
+                                                                     'layer_normalization_104[0][0
+                                                                    ]']                           
+                                                                                                  
+ add_56 (Add)                (None, 72, 32)               0         ['conv1d_137[0][0]',          
+                                                                     'multi_head_attention_34[0][0
+                                                                    ]']                           
+                                                                                                  
+ layer_normalization_105 (L  (None, 72, 32)               64        ['add_56[0][0]']              
+ ayerNormalization)                                                                               
+                                                                                                  
+ dense_309 (Dense)           (None, 72, 64)               2112      ['layer_normalization_105[0][0
+                                                                    ]']                           
+                                                                                                  
+ dropout_240 (Dropout)       (None, 72, 64)               0         ['dense_309[0][0]']           
+                                                                                                  
+ dense_310 (Dense)           (None, 72, 32)               2080      ['dropout_240[0][0]']         
+                                                                                                  
+ add_57 (Add)                (None, 72, 32)               0         ['add_56[0][0]',              
+                                                                     'dense_310[0][0]']           
+                                                                                                  
+ layer_normalization_106 (L  (None, 72, 32)               64        ['add_57[0][0]']              
+ ayerNormalization)                                                                               
+                                                                                                  
+ multi_head_attention_35 (M  (None, 72, 32)               16800     ['layer_normalization_106[0][0
+ ultiHeadAttention)                                                 ]',                           
+                                                                     'layer_normalization_106[0][0
+                                                                    ]']                           
+                                                                                                  
+ add_58 (Add)                (None, 72, 32)               0         ['add_57[0][0]',              
+                                                                     'multi_head_attention_35[0][0
+                                                                    ]']                           
+                                                                                                  
+ layer_normalization_107 (L  (None, 72, 32)               64        ['add_58[0][0]']              
+ ayerNormalization)                                                                               
+                                                                                                  
+ dense_311 (Dense)           (None, 72, 64)               2112      ['layer_normalization_107[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv1d_135 (Conv1D)         (None, 72, 64)               256       ['input_60[0][0]']            
+                                                                                                  
+ dropout_241 (Dropout)       (None, 72, 64)               0         ['dense_311[0][0]']           
+                                                                                                  
+ conv1d_136 (Conv1D)         (None, 72, 64)               12352     ['conv1d_135[0][0]']          
+                                                                                                  
+ dense_312 (Dense)           (None, 72, 32)               2080      ['dropout_241[0][0]']         
+                                                                                                  
+ bidirectional_46 (Bidirect  (None, 72, 128)              66048     ['conv1d_136[0][0]']          
+ ional)                                                                                           
+                                                                                                  
+ add_59 (Add)                (None, 72, 32)               0         ['add_58[0][0]',              
+                                                                     'dense_312[0][0]']           
+                                                                                                  
+ bidirectional_47 (Bidirect  (None, 64)                   41216     ['bidirectional_46[0][0]']    
+ ional)                                                                                           
+                                                                                                  
+ global_average_pooling1d_3  (None, 32)                   0         ['add_59[0][0]']              
+ 1 (GlobalAveragePooling1D)                                                                       
+                                                                                                  
+ concatenate_7 (Concatenate  (None, 96)                   0         ['bidirectional_47[0][0]',    
+ )                                                                   'global_average_pooling1d_31[
+                                                                    0][0]']                       
+                                                                                                  
+ dense_315 (Dense)           (None, 128)                  12416     ['concatenate_7[0][0]']       
+                                                                                                  
+ dropout_242 (Dropout)       (None, 128)                  0         ['dense_315[0][0]']           
+                                                                                                  
+ dense_317 (Dense)           (None, 72)                   9288      ['dropout_242[0][0]']         
+                                                                                                  
+ flatten_1 (Flatten)         (None, 72)                   0         ['input_60[0][0]']            
+                                                                                                  
+ tf.math.sigmoid_1 (TFOpLam  (None, 72)                   0         ['dense_317[0][0]']           
+ bda)                                                                                             
+                                                                                                  
+ dense_313 (Dense)           (None, 72)                   5256      ['flatten_1[0][0]']           
+                                                                                                  
+ dense_314 (Dense)           (None, 72)                   5256      ['flatten_1[0][0]']           
+                                                                                                  
+ dense_316 (Dense)           (None, 72)                   9288      ['dropout_242[0][0]']         
+                                                                                                  
+ tf.math.subtract_4 (TFOpLa  (None, 72)                   0         ['tf.math.sigmoid_1[0][0]']   
+ mbda)                                                                                            
+                                                                                                  
+ add_60 (Add)                (None, 72)                   0         ['dense_313[0][0]',           
+                                                                     'dense_314[0][0]']           
+                                                                                                  
+ tf.math.multiply_2 (TFOpLa  (None, 72)                   0         ['tf.math.sigmoid_1[0][0]',   
+ mbda)                                                               'dense_316[0][0]']           
+                                                                                                  
+ tf.math.multiply_3 (TFOpLa  (None, 72)                   0         ['tf.math.subtract_4[0][0]',  
+ mbda)                                                               'add_60[0][0]']              
+                                                                                                  
+ tf.__operators__.add_85 (T  (None, 72)                   0         ['tf.math.multiply_2[0][0]',  
+ FOpLambda)                                                          'tf.math.multiply_3[0][0]']  
+                                                                                                  
+==================================================================================================
+Total params: 203680 (795.62 KB)
+Trainable params: 203680 (795.62 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

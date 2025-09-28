@@ -1,0 +1,30 @@
+Model: "model_9"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_10 (InputLayer)       [(None, 72, 1)]           0         
+                                                                 
+ conv1d_31 (Conv1D)          (None, 72, 64)            256       
+                                                                 
+ batch_normalization_3 (Bat  (None, 72, 64)            256       
+ chNormalization)                                                
+                                                                 
+ dropout_40 (Dropout)        (None, 72, 64)            0         
+                                                                 
+ bidirectional_2 (Bidirecti  (None, 72, 128)           66048     
+ onal)                                                           
+                                                                 
+ bidirectional_3 (Bidirecti  (None, 128)               98816     
+ onal)                                                           
+                                                                 
+ dense_24 (Dense)            (None, 100)               12900     
+                                                                 
+ dropout_41 (Dropout)        (None, 100)               0         
+                                                                 
+ dense_25 (Dense)            (None, 72)                7272      
+                                                                 
+=================================================================
+Total params: 185548 (724.80 KB)
+Trainable params: 185420 (724.30 KB)
+Non-trainable params: 128 (512.00 Byte)
+_________________________________________________________________

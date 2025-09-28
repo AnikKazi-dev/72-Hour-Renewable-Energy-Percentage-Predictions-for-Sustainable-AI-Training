@@ -1,0 +1,39 @@
+Model: "model_13"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_sequence (InputLayer  [(None, 72, 1)]           0         
+ )                                                               
+                                                                 
+ conv1d_36 (Conv1D)          (None, 72, 128)           512       
+                                                                 
+ batch_normalization_9 (Bat  (None, 72, 128)           512       
+ chNormalization)                                                
+                                                                 
+ dropout_50 (Dropout)        (None, 72, 128)           0         
+                                                                 
+ conv1d_37 (Conv1D)          (None, 72, 64)            24640     
+                                                                 
+ batch_normalization_10 (Ba  (None, 72, 64)            256       
+ tchNormalization)                                               
+                                                                 
+ dropout_51 (Dropout)        (None, 72, 64)            0         
+                                                                 
+ lstm_11 (LSTM)              (None, 256)               328704    
+                                                                 
+ dropout_52 (Dropout)        (None, 256)               0         
+                                                                 
+ dense_32 (Dense)            (None, 256)               65792     
+                                                                 
+ batch_normalization_11 (Ba  (None, 256)               1024      
+ tchNormalization)                                               
+                                                                 
+ dropout_53 (Dropout)        (None, 256)               0         
+                                                                 
+ dense_33 (Dense)            (None, 72)                18504     
+                                                                 
+=================================================================
+Total params: 439944 (1.68 MB)
+Trainable params: 439048 (1.67 MB)
+Non-trainable params: 896 (3.50 KB)
+_________________________________________________________________

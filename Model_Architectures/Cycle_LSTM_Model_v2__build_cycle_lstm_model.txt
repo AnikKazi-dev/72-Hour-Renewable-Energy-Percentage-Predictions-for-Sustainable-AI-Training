@@ -1,0 +1,23 @@
+Model: "model_21"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_16 (InputLayer)       [(None, 72, 1)]           0         
+                                                                 
+ bidirectional_18 (Bidirect  (None, 72, 128)           33792     
+ ional)                                                          
+                                                                 
+ bidirectional_19 (Bidirect  (None, 128)               98816     
+ ional)                                                          
+                                                                 
+ dense_48 (Dense)            (None, 100)               12900     
+                                                                 
+ dropout_73 (Dropout)        (None, 100)               0         
+                                                                 
+ dense_49 (Dense)            (None, 72)                7272      
+                                                                 
+=================================================================
+Total params: 152780 (596.80 KB)
+Trainable params: 152780 (596.80 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________

@@ -1,0 +1,4 @@
+Model: DLinear_Model
+Country/Season: HU/summer
+Context last value: 60.00 | Forecast first: 59.29 | last: 59.72
+Forecast mean±std: 27.18 ± 22.46

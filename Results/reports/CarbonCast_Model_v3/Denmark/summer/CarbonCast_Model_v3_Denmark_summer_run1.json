@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\CarbonCast_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CarbonCast_Model_v3\\Denmark\\summer\\training_loss_plot_summer_carboncast_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CarbonCast_Model_v3\\Denmark\\summer\\forecast_examples_summer_carboncast_v3.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 6.160646364400408,
+    "mse": 61.51226961401746,
+    "rmse": 7.8429758136830605,
+    "mape": 0.07378014520345794
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\CarbonCast_Model_v3\\Denmark\\summer\\CarbonCast_Model_v3_Denmark_summer_run1_emissions.csv"
+}

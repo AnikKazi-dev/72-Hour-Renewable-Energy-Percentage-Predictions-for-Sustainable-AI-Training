@@ -1,0 +1,4 @@
+Model: DLinear_Model
+Country/Season: DE/winter
+Context last value: 34.00 | Forecast first: 32.55 | last: 21.46
+Forecast mean±std: 27.98 ± 7.23

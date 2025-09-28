@@ -1,0 +1,26 @@
+Model: "model_52"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_48 (InputLayer)       [(None, 72, 1)]           0         
+                                                                 
+ mamba_block_3 (MambaBlock)  (None, 72, 128)           34560     
+                                                                 
+ mamba_block_4 (MambaBlock)  (None, 72, 128)           99584     
+                                                                 
+ mamba_block_5 (MambaBlock)  (None, 72, 128)           99584     
+                                                                 
+ global_average_pooling1d_1  (None, 128)               0         
+ 9 (GlobalAveragePooling1D)                                      
+                                                                 
+ dense_128 (Dense)           (None, 64)                8256      
+                                                                 
+ dropout_140 (Dropout)       (None, 64)                0         
+                                                                 
+ dense_129 (Dense)           (None, 72)                4680      
+                                                                 
+=================================================================
+Total params: 246664 (963.53 KB)
+Trainable params: 246664 (963.53 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________

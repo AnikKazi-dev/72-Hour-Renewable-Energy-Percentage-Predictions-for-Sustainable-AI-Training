@@ -1,0 +1,4 @@
+Model: DLinear_Model_v2
+Country/Season: DK/summer
+Context last value: 92.50 | Forecast first: 91.53 | last: 57.80
+Forecast mean±std: 65.38 ± 9.43

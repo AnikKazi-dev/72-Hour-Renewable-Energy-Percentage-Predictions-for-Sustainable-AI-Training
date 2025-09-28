@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\PatchTST_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\PatchTST_Model_v3\\Hungary\\winter\\training_loss_plot_winter_patchtst_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\PatchTST_Model_v3\\Hungary\\winter\\forecast_examples_winter_patchtst_v3.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 9.10917844914203,
+    "mse": 162.08455285485306,
+    "rmse": 12.73124317790109,
+    "mape": 0.6271838211756071
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\PatchTST_Model_v3\\Hungary\\winter\\PatchTST_Model_v3_Hungary_winter_run1_emissions.csv"
+}

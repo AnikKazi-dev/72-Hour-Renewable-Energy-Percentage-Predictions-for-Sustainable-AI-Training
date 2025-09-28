@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\CNN_LSTM_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CNN_LSTM_Model_v3\\Denmark\\summer\\training_loss_plot_summer_cnnlstm_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CNN_LSTM_Model_v3\\Denmark\\summer\\forecast_examples_summer_cnnlstm_v3.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 6.405944457585303,
+    "mse": 62.249456073580845,
+    "rmse": 7.88983244901822,
+    "mape": 0.07607636742694272
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\CNN_LSTM_Model_v3\\Denmark\\summer\\CNN_LSTM_Model_v3_Denmark_summer_run1_emissions.csv"
+}

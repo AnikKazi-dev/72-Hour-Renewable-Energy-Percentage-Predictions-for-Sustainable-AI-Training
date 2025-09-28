@@ -1,0 +1,4 @@
+Model: Cycle_LSTM_Model_v2
+Country/Season: DK/winter
+Context last value: 66.00 | Forecast first: 4.16 | last: 2.65
+Forecast mean±std: 3.39 ± 0.55

@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\CNN_LSTM_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CNN_LSTM_Model_v2\\Hungary\\summer\\training_loss_plot_summer_cnnlstm_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CNN_LSTM_Model_v2\\Hungary\\summer\\forecast_examples_summer_cnnlstm_v2.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 6.468691774779708,
+    "mse": 66.69751673502749,
+    "rmse": 8.166854763923961,
+    "mape": 0.24057484021849795
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\CNN_LSTM_Model_v2\\Hungary\\summer\\CNN_LSTM_Model_v2_Hungary_summer_run1_emissions.csv"
+}

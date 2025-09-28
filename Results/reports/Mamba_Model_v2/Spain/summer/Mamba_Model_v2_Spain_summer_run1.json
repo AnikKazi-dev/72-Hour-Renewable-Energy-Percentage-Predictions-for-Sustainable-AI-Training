@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Mamba_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Mamba_Model_v2\\Spain\\summer\\training_loss_plot_summer_mamba_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Mamba_Model_v2\\Spain\\summer\\forecast_examples_summer_mamba_v2.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 9.156784340226613,
+    "mse": 116.31029751236476,
+    "rmse": 10.784725194105075,
+    "mape": 0.16959829712712263
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Mamba_Model_v2\\Spain\\summer\\Mamba_Model_v2_Spain_summer_run1_emissions.csv"
+}

@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\DLinear_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\DLinear_Model_v3\\Spain\\winter\\training_loss_plot_winter_dlinear_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\DLinear_Model_v3\\Spain\\winter\\forecast_examples_winter_dlinear_v3.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 8.60738994491484,
+    "mse": 116.58378909444869,
+    "rmse": 10.79739732965536,
+    "mape": 0.17793427960022745
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\DLinear_Model_v3\\Spain\\winter\\DLinear_Model_v3_Spain_winter_run1_emissions.csv"
+}

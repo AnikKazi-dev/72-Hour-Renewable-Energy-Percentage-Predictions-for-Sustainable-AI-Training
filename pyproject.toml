@@ -1,0 +1,10 @@
+[project]
+name = "bionet"
+version = "0.1.0"
+description = "BioNet models migrated from notebooks"
+requires-python = ">=3.9"
+readme = "README.md"
+
+[tool.codecarbon]
+country = "DEU"
+output_dir = "Results/emissions"

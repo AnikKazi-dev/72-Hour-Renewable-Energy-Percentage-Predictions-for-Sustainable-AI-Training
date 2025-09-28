@@ -1,0 +1,4 @@
+Model: Cycle_LSTM_Model_v2
+Country/Season: ES/summer
+Context last value: 67.00 | Forecast first: 4.08 | last: 3.96
+Forecast mean±std: 3.30 ± 0.46

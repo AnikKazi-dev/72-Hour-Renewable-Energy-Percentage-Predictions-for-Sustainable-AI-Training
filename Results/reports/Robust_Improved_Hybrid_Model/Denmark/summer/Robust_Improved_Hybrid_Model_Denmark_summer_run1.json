@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Robust_Improved_Hybrid_Model.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Robust_Improved_Hybrid_Model\\Denmark\\summer\\training_loss_plot_summer_robust_improved_hybrid.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Robust_Improved_Hybrid_Model\\Denmark\\summer\\forecast_examples_summer_robust_improved_hybrid.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 5.1042141006490995,
+    "mse": 53.53148989662257,
+    "rmse": 7.3165217075207645,
+    "mape": 0.06367530305544038
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Robust_Improved_Hybrid_Model\\Denmark\\summer\\Robust_Improved_Hybrid_Model_Denmark_summer_run1_emissions.csv"
+}

@@ -1,0 +1,4 @@
+Model: Cycle_LSTM_Model_v2
+Country/Season: ES/winter
+Context last value: 51.00 | Forecast first: 7.40 | last: 5.33
+Forecast mean±std: 4.77 ± 1.05

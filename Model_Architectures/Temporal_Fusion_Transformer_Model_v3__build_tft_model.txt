@@ -1,0 +1,81 @@
+Model: "model_74"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_70 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ dense_386 (Dense)           (None, 72, 128)              256       ['input_70[0][0]']            
+                                                                                                  
+ lstm_71 (LSTM)              (None, 72, 128)              131584    ['dense_386[0][0]']           
+                                                                                                  
+ add_95 (Add)                (None, 72, 128)              0         ['lstm_71[0][0]',             
+                                                                     'dense_386[0][0]']           
+                                                                                                  
+ layer_normalization_130 (L  (None, 72, 128)              256       ['add_95[0][0]']              
+ ayerNormalization)                                                                               
+                                                                                                  
+ dense_387 (Dense)           (None, 72, 128)              16512     ['layer_normalization_130[0][0
+                                                                    ]']                           
+                                                                                                  
+ dense_388 (Dense)           (None, 72, 128)              16512     ['dense_387[0][0]']           
+                                                                                                  
+ dropout_267 (Dropout)       (None, 72, 128)              0         ['dense_388[0][0]']           
+                                                                                                  
+ dense_389 (Dense)           (None, 72, 128)              16512     ['dropout_267[0][0]']         
+                                                                                                  
+ dense_390 (Dense)           (None, 72, 128)              16512     ['dropout_267[0][0]']         
+                                                                                                  
+ multiply_8 (Multiply)       (None, 72, 128)              0         ['dense_389[0][0]',           
+                                                                     'dense_390[0][0]']           
+                                                                                                  
+ add_96 (Add)                (None, 72, 128)              0         ['layer_normalization_130[0][0
+                                                                    ]',                           
+                                                                     'multiply_8[0][0]']          
+                                                                                                  
+ multi_head_attention_45 (M  (None, 72, 128)              263808    ['add_96[0][0]',              
+ ultiHeadAttention)                                                  'add_96[0][0]']              
+                                                                                                  
+ add_97 (Add)                (None, 72, 128)              0         ['multi_head_attention_45[0][0
+                                                                    ]',                           
+                                                                     'add_96[0][0]']              
+                                                                                                  
+ layer_normalization_131 (L  (None, 72, 128)              256       ['add_97[0][0]']              
+ ayerNormalization)                                                                               
+                                                                                                  
+ dense_391 (Dense)           (None, 72, 128)              16512     ['layer_normalization_131[0][0
+                                                                    ]']                           
+                                                                                                  
+ dense_392 (Dense)           (None, 72, 128)              16512     ['dense_391[0][0]']           
+                                                                                                  
+ dropout_268 (Dropout)       (None, 72, 128)              0         ['dense_392[0][0]']           
+                                                                                                  
+ dense_393 (Dense)           (None, 72, 128)              16512     ['dropout_268[0][0]']         
+                                                                                                  
+ dense_394 (Dense)           (None, 72, 128)              16512     ['dropout_268[0][0]']         
+                                                                                                  
+ multiply_9 (Multiply)       (None, 72, 128)              0         ['dense_393[0][0]',           
+                                                                     'dense_394[0][0]']           
+                                                                                                  
+ add_98 (Add)                (None, 72, 128)              0         ['layer_normalization_131[0][0
+                                                                    ]',                           
+                                                                     'multiply_9[0][0]']          
+                                                                                                  
+ global_average_pooling1d_4  (None, 128)                  0         ['add_98[0][0]']              
+ 1 (GlobalAveragePooling1D)                                                                       
+                                                                                                  
+ dense_395 (Dense)           (None, 256)                  33024     ['global_average_pooling1d_41[
+                                                                    0][0]']                       
+                                                                                                  
+ dropout_269 (Dropout)       (None, 256)                  0         ['dense_395[0][0]']           
+                                                                                                  
+ dense_396 (Dense)           (None, 128)                  32896     ['dropout_269[0][0]']         
+                                                                                                  
+ dropout_270 (Dropout)       (None, 128)                  0         ['dense_396[0][0]']           
+                                                                                                  
+ dense_397 (Dense)           (None, 72)                   9288      ['dropout_270[0][0]']         
+                                                                                                  
+==================================================================================================
+Total params: 603464 (2.30 MB)
+Trainable params: 603464 (2.30 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

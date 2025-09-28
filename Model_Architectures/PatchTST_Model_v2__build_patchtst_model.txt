@@ -1,0 +1,85 @@
+Model: "model_66"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_56 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ patching_1 (Patching)       (None, None, 1)              0         ['input_56[0][0]']            
+                                                                                                  
+ token_and_position_embeddi  (None, None, 64)             4736      ['patching_1[0][0]']          
+ ng_9 (TokenAndPositionEmbe                                                                       
+ dding)                                                                                           
+                                                                                                  
+ layer_normalization_86 (La  (None, None, 64)             128       ['token_and_position_embedding
+ yerNormalization)                                                  _9[0][0]']                    
+                                                                                                  
+ multi_head_attention_25 (M  (None, None, 64)             66368     ['layer_normalization_86[0][0]
+ ultiHeadAttention)                                                 ',                            
+                                                                     'layer_normalization_86[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_219 (Dropout)       (None, None, 64)             0         ['multi_head_attention_25[0][0
+                                                                    ]']                           
+                                                                                                  
+ tf.__operators__.add_70 (T  (None, None, 64)             0         ['dropout_219[0][0]',         
+ FOpLambda)                                                          'token_and_position_embedding
+                                                                    _9[0][0]']                    
+                                                                                                  
+ layer_normalization_87 (La  (None, None, 64)             128       ['tf.__operators__.add_70[0][0
+ yerNormalization)                                                  ]']                           
+                                                                                                  
+ conv1d_118 (Conv1D)         (None, None, 4)              260       ['layer_normalization_87[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_220 (Dropout)       (None, None, 4)              0         ['conv1d_118[0][0]']          
+                                                                                                  
+ conv1d_119 (Conv1D)         (None, None, 64)             320       ['dropout_220[0][0]']         
+                                                                                                  
+ tf.__operators__.add_71 (T  (None, None, 64)             0         ['conv1d_119[0][0]',          
+ FOpLambda)                                                          'tf.__operators__.add_70[0][0
+                                                                    ]']                           
+                                                                                                  
+ layer_normalization_88 (La  (None, None, 64)             128       ['tf.__operators__.add_71[0][0
+ yerNormalization)                                                  ]']                           
+                                                                                                  
+ multi_head_attention_26 (M  (None, None, 64)             66368     ['layer_normalization_88[0][0]
+ ultiHeadAttention)                                                 ',                            
+                                                                     'layer_normalization_88[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_221 (Dropout)       (None, None, 64)             0         ['multi_head_attention_26[0][0
+                                                                    ]']                           
+                                                                                                  
+ tf.__operators__.add_72 (T  (None, None, 64)             0         ['dropout_221[0][0]',         
+ FOpLambda)                                                          'tf.__operators__.add_71[0][0
+                                                                    ]']                           
+                                                                                                  
+ layer_normalization_89 (La  (None, None, 64)             128       ['tf.__operators__.add_72[0][0
+ yerNormalization)                                                  ]']                           
+                                                                                                  
+ conv1d_120 (Conv1D)         (None, None, 4)              260       ['layer_normalization_89[0][0]
+                                                                    ']                            
+                                                                                                  
+ dropout_222 (Dropout)       (None, None, 4)              0         ['conv1d_120[0][0]']          
+                                                                                                  
+ conv1d_121 (Conv1D)         (None, None, 64)             320       ['dropout_222[0][0]']         
+                                                                                                  
+ tf.__operators__.add_73 (T  (None, None, 64)             0         ['conv1d_121[0][0]',          
+ FOpLambda)                                                          'tf.__operators__.add_72[0][0
+                                                                    ]']                           
+                                                                                                  
+ global_average_pooling1d_2  (None, 64)                   0         ['tf.__operators__.add_73[0][0
+ 7 (GlobalAveragePooling1D)                                         ]']                           
+                                                                                                  
+ dense_291 (Dense)           (None, 64)                   4160      ['global_average_pooling1d_27[
+                                                                    0][0]']                       
+                                                                                                  
+ dropout_223 (Dropout)       (None, 64)                   0         ['dense_291[0][0]']           
+                                                                                                  
+ dense_292 (Dense)           (None, 72)                   4680      ['dropout_223[0][0]']         
+                                                                                                  
+==================================================================================================
+Total params: 147984 (578.06 KB)
+Trainable params: 147984 (578.06 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

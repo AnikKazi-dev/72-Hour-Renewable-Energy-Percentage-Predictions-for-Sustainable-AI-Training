@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\CarbonCast_Model.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CarbonCast_Model\\winter\\training_loss_plot_winter_carboncast.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CarbonCast_Model\\winter\\forecast_examples_winter_carboncast.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 12.487053901978257,
+    "mse": 238.16105000501574,
+    "rmse": 15.432467398475714,
+    "mape": 0.27326968570624016
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\CarbonCast_Model\\winter\\CarbonCast_Model_winter_run1_emissions.csv"
+}

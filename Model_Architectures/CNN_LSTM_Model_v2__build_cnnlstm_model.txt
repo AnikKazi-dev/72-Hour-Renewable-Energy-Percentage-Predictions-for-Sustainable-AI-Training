@@ -1,0 +1,43 @@
+Model: "model_15"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_sequence (InputLayer  [(None, 72, 1)]           0         
+ )                                                               
+                                                                 
+ conv1d_40 (Conv1D)          (None, 72, 128)           512       
+                                                                 
+ batch_normalization_15 (Ba  (None, 72, 128)           512       
+ tchNormalization)                                               
+                                                                 
+ dropout_58 (Dropout)        (None, 72, 128)           0         
+                                                                 
+ conv1d_41 (Conv1D)          (None, 72, 64)            24640     
+                                                                 
+ batch_normalization_16 (Ba  (None, 72, 64)            256       
+ tchNormalization)                                               
+                                                                 
+ dropout_59 (Dropout)        (None, 72, 64)            0         
+                                                                 
+ bidirectional_10 (Bidirect  (None, 72, 128)           66048     
+ ional)                                                          
+                                                                 
+ bidirectional_11 (Bidirect  (None, 128)               98816     
+ ional)                                                          
+                                                                 
+ dropout_60 (Dropout)        (None, 128)               0         
+                                                                 
+ dense_36 (Dense)            (None, 100)               12900     
+                                                                 
+ batch_normalization_17 (Ba  (None, 100)               400       
+ tchNormalization)                                               
+                                                                 
+ dropout_61 (Dropout)        (None, 100)               0         
+                                                                 
+ dense_37 (Dense)            (None, 72)                7272      
+                                                                 
+=================================================================
+Total params: 211356 (825.61 KB)
+Trainable params: 210772 (823.33 KB)
+Non-trainable params: 584 (2.28 KB)
+_________________________________________________________________

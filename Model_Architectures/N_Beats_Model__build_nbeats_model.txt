@@ -1,0 +1,37 @@
+Model: "model_58"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_sequence (InputLayer  [(None, 72)]                 0         []                            
+ )                                                                                                
+                                                                                                  
+ n_beats_block_3 (NBeatsBlo  ((None, 72),                 384656    ['input_sequence[0][0]']      
+ ck)                          (None, 72))                                                         
+                                                                                                  
+ tf.math.negative_3 (TFOpLa  (None, 72)                   0         ['n_beats_block_3[0][0]']     
+ mbda)                                                                                            
+                                                                                                  
+ add_29 (Add)                (None, 72)                   0         ['input_sequence[0][0]',      
+                                                                     'tf.math.negative_3[0][0]']  
+                                                                                                  
+ n_beats_block_4 (NBeatsBlo  ((None, 72),                 384656    ['add_29[0][0]']              
+ ck)                          (None, 72))                                                         
+                                                                                                  
+ tf.math.negative_4 (TFOpLa  (None, 72)                   0         ['n_beats_block_4[0][0]']     
+ mbda)                                                                                            
+                                                                                                  
+ add_30 (Add)                (None, 72)                   0         ['add_29[0][0]',              
+                                                                     'tf.math.negative_4[0][0]']  
+                                                                                                  
+ n_beats_block_5 (NBeatsBlo  ((None, 72),                 384656    ['add_30[0][0]']              
+ ck)                          (None, 72))                                                         
+                                                                                                  
+ add_32 (Add)                (None, 72)                   0         ['n_beats_block_3[0][1]',     
+                                                                     'n_beats_block_4[0][1]',     
+                                                                     'n_beats_block_5[0][1]']     
+                                                                                                  
+==================================================================================================
+Total params: 1153968 (4.40 MB)
+Trainable params: 1153968 (4.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

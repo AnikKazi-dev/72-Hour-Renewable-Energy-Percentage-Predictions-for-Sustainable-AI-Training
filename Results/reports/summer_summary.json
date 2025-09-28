@@ -1,0 +1,11 @@
+[
+  {
+    "model": "Robust_Improved_Hybrid_Model_v2.py",
+    "season": "summer",
+    "country_code": "DK",
+    "country": "Denmark",
+    "run_name": "Robust_Improved_Hybrid_Model_v2_Denmark_summer_run1",
+    "returncode": 0,
+    "timed_out": false
+  }
+]

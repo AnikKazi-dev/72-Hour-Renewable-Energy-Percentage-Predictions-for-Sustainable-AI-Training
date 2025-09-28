@@ -1,0 +1,4 @@
+Model: DLinear_Model
+Country/Season: DE/summer
+Context last value: 85.00 | Forecast first: 84.17 | last: 76.44
+Forecast mean±std: 49.93 ± 17.85

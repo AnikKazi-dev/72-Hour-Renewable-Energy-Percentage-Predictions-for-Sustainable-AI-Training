@@ -1,0 +1,45 @@
+Model: "model_40"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_36 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ conv1d_53 (Conv1D)          (None, 72, 64)               256       ['input_36[0][0]']            
+                                                                                                  
+ batch_normalization_35 (Ba  (None, 72, 64)               256       ['conv1d_53[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ dropout_92 (Dropout)        (None, 72, 64)               0         ['batch_normalization_35[0][0]
+                                                                    ']                            
+                                                                                                  
+ lstm_54 (LSTM)              (None, 72, 128)              98816     ['dropout_92[0][0]']          
+                                                                                                  
+ lstm_55 (LSTM)              (None, 72, 128)              98816     ['dropout_92[0][0]']          
+                                                                                                  
+ add_8 (Add)                 (None, 72, 128)              0         ['lstm_54[0][0]',             
+                                                                     'lstm_55[0][0]']             
+                                                                                                  
+ permute_2 (Permute)         (None, 128, 72)              0         ['add_8[0][0]']               
+                                                                                                  
+ dense_84 (Dense)            (None, 128, 72)              5256      ['permute_2[0][0]']           
+                                                                                                  
+ permute_3 (Permute)         (None, 72, 128)              0         ['dense_84[0][0]']            
+                                                                                                  
+ multiply_1 (Multiply)       (None, 72, 128)              0         ['add_8[0][0]',               
+                                                                     'permute_3[0][0]']           
+                                                                                                  
+ global_average_pooling1d_7  (None, 128)                  0         ['multiply_1[0][0]']          
+  (GlobalAveragePooling1D)                                                                        
+                                                                                                  
+ dense_85 (Dense)            (None, 128)                  16512     ['global_average_pooling1d_7[0
+                                                                    ][0]']                        
+                                                                                                  
+ dropout_93 (Dropout)        (None, 128)                  0         ['dense_85[0][0]']            
+                                                                                                  
+ dense_86 (Dense)            (None, 72)                   9288      ['dropout_93[0][0]']          
+                                                                                                  
+==================================================================================================
+Total params: 229200 (895.31 KB)
+Trainable params: 229072 (894.81 KB)
+Non-trainable params: 128 (512.00 Byte)
+__________________________________________________________________________________________________

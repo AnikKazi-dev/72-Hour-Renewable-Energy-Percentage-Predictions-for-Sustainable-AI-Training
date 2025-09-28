@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Mamba_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Mamba_Model_v2\\Denmark\\winter\\training_loss_plot_winter_mamba_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Mamba_Model_v2\\Denmark\\winter\\forecast_examples_winter_mamba_v2.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 10.957540489448224,
+    "mse": 178.5761293451356,
+    "rmse": 13.363237981310354,
+    "mape": 0.1537769844568193
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Mamba_Model_v2\\Denmark\\winter\\Mamba_Model_v2_Denmark_winter_run1_emissions.csv"
+}

@@ -1,0 +1,48 @@
+Model: "model_38"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_34 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ conv1d_51 (Conv1D)          (None, 72, 128)              512       ['input_34[0][0]']            
+                                                                                                  
+ batch_normalization_32 (Ba  (None, 72, 128)              512       ['conv1d_51[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ dropout_87 (Dropout)        (None, 72, 128)              0         ['batch_normalization_32[0][0]
+                                                                    ']                            
+                                                                                                  
+ bidirectional_36 (Bidirect  (None, 72, 256)              263168    ['dropout_87[0][0]']          
+ ional)                                                                                           
+                                                                                                  
+ bidirectional_38 (Bidirect  (None, 72, 256)              133120    ['input_34[0][0]']            
+ ional)                                                                                           
+                                                                                                  
+ bidirectional_37 (Bidirect  (None, 256)                  394240    ['bidirectional_36[0][0]']    
+ ional)                                                                                           
+                                                                                                  
+ bidirectional_39 (Bidirect  (None, 256)                  394240    ['bidirectional_38[0][0]']    
+ ional)                                                                                           
+                                                                                                  
+ concatenate_5 (Concatenate  (None, 512)                  0         ['bidirectional_37[0][0]',    
+ )                                                                   'bidirectional_39[0][0]']    
+                                                                                                  
+ dense_78 (Dense)            (None, 256)                  131328    ['concatenate_5[0][0]']       
+                                                                                                  
+ batch_normalization_33 (Ba  (None, 256)                  1024      ['dense_78[0][0]']            
+ tchNormalization)                                                                                
+                                                                                                  
+ dropout_88 (Dropout)        (None, 256)                  0         ['batch_normalization_33[0][0]
+                                                                    ']                            
+                                                                                                  
+ dense_79 (Dense)            (None, 128)                  32896     ['dropout_88[0][0]']          
+                                                                                                  
+ dropout_89 (Dropout)        (None, 128)                  0         ['dense_79[0][0]']            
+                                                                                                  
+ dense_80 (Dense)            (None, 72)                   9288      ['dropout_89[0][0]']          
+                                                                                                  
+==================================================================================================
+Total params: 1360328 (5.19 MB)
+Trainable params: 1359560 (5.19 MB)
+Non-trainable params: 768 (3.00 KB)
+__________________________________________________________________________________________________

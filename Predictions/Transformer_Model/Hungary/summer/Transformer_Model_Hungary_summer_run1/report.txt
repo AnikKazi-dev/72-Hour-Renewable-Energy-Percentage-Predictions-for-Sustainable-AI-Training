@@ -1,0 +1,4 @@
+Model: Transformer_Model
+Country/Season: HU/summer
+Context last value: 60.00 | Forecast first: 64.34 | last: 53.59
+Forecast mean±std: 27.89 ± 22.41

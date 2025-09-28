@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Autoformer_Model.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Autoformer_Model\\summer\\training_loss_plot_summer_autoformer.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Autoformer_Model\\summer\\forecast_examples_summer_autoformer.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 14.50167916575298,
+    "mse": 298.34489331492347,
+    "rmse": 17.272663179571456,
+    "mape": 0.24147245299711348
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Autoformer_Model\\summer\\Autoformer_Model_summer_run1_emissions.csv"
+}

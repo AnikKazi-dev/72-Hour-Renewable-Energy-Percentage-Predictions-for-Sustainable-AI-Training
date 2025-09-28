@@ -1,0 +1,11 @@
+[
+  {
+    "model": "DLinear_Model_v2.py",
+    "season": "winter",
+    "country_code": "HU",
+    "country": "Hungary",
+    "run_name": "DLinear_Model_v2_Hungary_winter_run1",
+    "returncode": 0,
+    "timed_out": false
+  }
+]

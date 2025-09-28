@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Hybrid_CNN_CycleLSTM_Attention_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Hybrid_CNN_CycleLSTM_Attention_Model_v2\\winter\\training_loss_plot_winter_hybrid_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Hybrid_CNN_CycleLSTM_Attention_Model_v2\\winter\\forecast_examples_winter_hybrid_v2.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 12.951719884611347,
+    "mse": 260.9425527315631,
+    "rmse": 16.15371637523586,
+    "mape": 0.27861288194874123
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Hybrid_CNN_CycleLSTM_Attention_Model_v2\\winter\\Hybrid_CNN_CycleLSTM_Attention_Model_v2_winter_run1_emissions.csv"
+}

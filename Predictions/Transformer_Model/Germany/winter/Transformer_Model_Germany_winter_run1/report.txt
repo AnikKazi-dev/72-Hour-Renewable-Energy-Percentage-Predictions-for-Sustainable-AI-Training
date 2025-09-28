@@ -1,0 +1,4 @@
+Model: Transformer_Model
+Country/Season: DE/winter
+Context last value: 34.00 | Forecast first: 29.49 | last: 120.35
+Forecast mean±std: 109.82 ± 38.84

@@ -1,0 +1,4 @@
+Model: Cycle_LSTM_Model_v2
+Country/Season: DK/summer
+Context last value: 92.50 | Forecast first: 4.76 | last: 3.94
+Forecast mean±std: 3.47 ± 0.53

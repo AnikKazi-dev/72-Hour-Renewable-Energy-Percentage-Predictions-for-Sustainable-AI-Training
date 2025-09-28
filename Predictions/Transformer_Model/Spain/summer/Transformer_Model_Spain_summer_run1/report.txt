@@ -1,0 +1,4 @@
+Model: Transformer_Model
+Country/Season: ES/summer
+Context last value: 67.00 | Forecast first: 73.36 | last: 112.91
+Forecast mean±std: 89.16 ± 13.54

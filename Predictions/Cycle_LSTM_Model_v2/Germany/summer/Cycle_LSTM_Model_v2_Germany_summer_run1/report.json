@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2025-09-22T20:10:21.226634+00:00",
+  "country": "DE",
+  "season": "summer",
+  "model": "Cycle_LSTM_Model_v2",
+  "context_hours": 72,
+  "forecast_hours": 72,
+  "context_stats": {
+    "last_value": 85.0,
+    "mean": 60.52777777777778,
+    "std": 18.740903143052737,
+    "min": 30.0,
+    "max": 89.0
+  },
+  "forecast_stats": {
+    "first": 6.187319278717041,
+    "last": 4.0880231857299805,
+    "mean": 4.14022159576416,
+    "std": 0.921573281288147,
+    "min": 2.557650089263916,
+    "max": 6.187319278717041
+  },
+  "delta_first_vs_last_context": -78.81268072128296,
+  "delta_last_vs_last_context": -80.91197681427002,
+  "data_source": "CSV fallback"
+}

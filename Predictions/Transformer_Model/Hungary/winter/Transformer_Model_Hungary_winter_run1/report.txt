@@ -1,0 +1,4 @@
+Model: Transformer_Model
+Country/Season: HU/winter
+Context last value: 14.00 | Forecast first: 11.06 | last: 3.27
+Forecast mean±std: 16.87 ± 13.14

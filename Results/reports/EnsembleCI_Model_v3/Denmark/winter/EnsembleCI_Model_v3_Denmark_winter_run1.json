@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\EnsembleCI_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\EnsembleCI_Model_v3\\Denmark\\winter\\training_loss_plot_winter_ensembleci_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\EnsembleCI_Model_v3\\Denmark\\winter\\forecast_examples_winter_ensembleci_v3.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 10.08344596052575,
+    "mse": 153.0656139382108,
+    "rmse": 12.37196887880869,
+    "mape": 0.1367656141262947
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\EnsembleCI_Model_v3\\Denmark\\winter\\EnsembleCI_Model_v3_Denmark_winter_run1_emissions.csv"
+}

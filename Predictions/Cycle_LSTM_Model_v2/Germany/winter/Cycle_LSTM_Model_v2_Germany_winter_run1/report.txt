@@ -1,0 +1,4 @@
+Model: Cycle_LSTM_Model_v2
+Country/Season: DE/winter
+Context last value: 34.00 | Forecast first: 6.72 | last: 4.57
+Forecast mean±std: 4.17 ± 1.11

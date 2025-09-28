@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Cycle_LSTM_Model.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Cycle_LSTM_Model\\Hungary\\summer\\training_loss_plot_summer_cycle_lstm.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Cycle_LSTM_Model\\Hungary\\summer\\forecast_examples_summer_cycle_lstm.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 4.910820145474245,
+    "mse": 43.74257226887256,
+    "rmse": 6.613816770131492,
+    "mape": 0.192614734752085
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Cycle_LSTM_Model\\Hungary\\summer\\Cycle_LSTM_Model_Hungary_summer_run1_emissions.csv"
+}

@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\EnsembleCI_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\EnsembleCI_Model_v2\\Hungary\\summer\\training_loss_plot_summer_ensembleci_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\EnsembleCI_Model_v2\\Hungary\\summer\\forecast_examples_summer_ensembleci_v2.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 5.463448620339708,
+    "mse": 53.07188410643882,
+    "rmse": 7.285045237089391,
+    "mape": 0.19649776053108364
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\EnsembleCI_Model_v2\\Hungary\\summer\\EnsembleCI_Model_v2_Hungary_summer_run1_emissions.csv"
+}

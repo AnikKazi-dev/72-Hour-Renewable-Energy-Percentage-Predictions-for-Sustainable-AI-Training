@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Informer_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Informer_Model_v2\\Denmark\\winter\\training_loss_plot_winter_informer_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Informer_Model_v2\\Denmark\\winter\\forecast_examples_winter_informer_v2.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 10.006271007988188,
+    "mse": 156.3824786147105,
+    "rmse": 12.50529802182701,
+    "mape": 0.13962122801746288
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Informer_Model_v2\\Denmark\\winter\\Informer_Model_v2_Denmark_winter_run1_emissions.csv"
+}

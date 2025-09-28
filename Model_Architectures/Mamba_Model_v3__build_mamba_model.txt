@@ -1,0 +1,57 @@
+Model: "model_56"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_52 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ layer_normalization_68 (La  (None, 72, 1)                2         ['input_52[0][0]']            
+ yerNormalization)                                                                                
+                                                                                                  
+ mamba_block_14 (MambaBlock  (None, 72, 128)              34560     ['layer_normalization_68[0][0]
+ )                                                                  ']                            
+                                                                                                  
+ add_21 (Add)                (None, 72, 128)              0         ['input_52[0][0]',            
+                                                                     'mamba_block_14[0][0]']      
+                                                                                                  
+ layer_normalization_69 (La  (None, 72, 128)              256       ['add_21[0][0]']              
+ yerNormalization)                                                                                
+                                                                                                  
+ mamba_block_15 (MambaBlock  (None, 72, 128)              99584     ['layer_normalization_69[0][0]
+ )                                                                  ']                            
+                                                                                                  
+ add_22 (Add)                (None, 72, 128)              0         ['add_21[0][0]',              
+                                                                     'mamba_block_15[0][0]']      
+                                                                                                  
+ layer_normalization_70 (La  (None, 72, 128)              256       ['add_22[0][0]']              
+ yerNormalization)                                                                                
+                                                                                                  
+ mamba_block_16 (MambaBlock  (None, 72, 128)              99584     ['layer_normalization_70[0][0]
+ )                                                                  ']                            
+                                                                                                  
+ add_23 (Add)                (None, 72, 128)              0         ['add_22[0][0]',              
+                                                                     'mamba_block_16[0][0]']      
+                                                                                                  
+ layer_normalization_71 (La  (None, 72, 128)              256       ['add_23[0][0]']              
+ yerNormalization)                                                                                
+                                                                                                  
+ mamba_block_17 (MambaBlock  (None, 72, 128)              99584     ['layer_normalization_71[0][0]
+ )                                                                  ']                            
+                                                                                                  
+ add_24 (Add)                (None, 72, 128)              0         ['add_23[0][0]',              
+                                                                     'mamba_block_17[0][0]']      
+                                                                                                  
+ global_average_pooling1d_2  (None, 128)                  0         ['add_24[0][0]']              
+ 3 (GlobalAveragePooling1D)                                                                       
+                                                                                                  
+ dense_161 (Dense)           (None, 64)                   8256      ['global_average_pooling1d_23[
+                                                                    0][0]']                       
+                                                                                                  
+ dropout_145 (Dropout)       (None, 64)                   0         ['dense_161[0][0]']           
+                                                                                                  
+ dense_162 (Dense)           (None, 72)                   4680      ['dropout_145[0][0]']         
+                                                                                                  
+==================================================================================================
+Total params: 347018 (1.32 MB)
+Trainable params: 347018 (1.32 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

@@ -1,0 +1,49 @@
+Model: "model_70"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_65 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ dense_347 (Dense)           (None, 72, 128)              256       ['input_65[0][0]']            
+                                                                                                  
+ lstm_67 (LSTM)              (None, 72, 128)              131584    ['dense_347[0][0]']           
+                                                                                                  
+ dense_348 (Dense)           (None, 72, 128)              16512     ['lstm_67[0][0]']             
+                                                                                                  
+ add_80 (Add)                (None, 72, 128)              0         ['dense_348[0][0]',           
+                                                                     'lstm_67[0][0]']             
+                                                                                                  
+ multi_head_attention_41 (M  (None, 72, 128)              263808    ['add_80[0][0]',              
+ ultiHeadAttention)                                                  'add_80[0][0]']              
+                                                                                                  
+ add_81 (Add)                (None, 72, 128)              0         ['multi_head_attention_41[0][0
+                                                                    ]',                           
+                                                                     'add_80[0][0]']              
+                                                                                                  
+ layer_normalization_123 (L  (None, 72, 128)              256       ['add_81[0][0]']              
+ ayerNormalization)                                                                               
+                                                                                                  
+ dense_349 (Dense)           (None, 72, 128)              16512     ['layer_normalization_123[0][0
+                                                                    ]']                           
+                                                                                                  
+ add_82 (Add)                (None, 72, 128)              0         ['dense_349[0][0]',           
+                                                                     'layer_normalization_123[0][0
+                                                                    ]']                           
+                                                                                                  
+ global_average_pooling1d_3  (None, 128)                  0         ['add_82[0][0]']              
+ 7 (GlobalAveragePooling1D)                                                                       
+                                                                                                  
+ dense_350 (Dense)           (None, 128)                  16512     ['global_average_pooling1d_37[
+                                                                    0][0]']                       
+                                                                                                  
+ dropout_256 (Dropout)       (None, 128)                  0         ['dense_350[0][0]']           
+                                                                                                  
+ input_66 (InputLayer)       [(None, 1)]                  0         []                            
+                                                                                                  
+ dense_351 (Dense)           (None, 72)                   9288      ['dropout_256[0][0]']         
+                                                                                                  
+==================================================================================================
+Total params: 454728 (1.73 MB)
+Trainable params: 454728 (1.73 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

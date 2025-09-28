@@ -1,0 +1,32 @@
+Model: "model_1"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_2 (InputLayer)        [(None, 72)]                 0         []                            
+                                                                                                  
+ moving_average_1 (MovingAv  (None, 72)                   0         ['input_2[0][0]']             
+ erage)                                                                                           
+                                                                                                  
+ tf.math.subtract_1 (TFOpLa  (None, 72)                   0         ['input_2[0][0]',             
+ mbda)                                                               'moving_average_1[0][0]']    
+                                                                                                  
+ dense_6 (Dense)             (None, 512)                  37376     ['tf.math.subtract_1[0][0]']  
+                                                                                                  
+ dense_4 (Dense)             (None, 512)                  37376     ['moving_average_1[0][0]']    
+                                                                                                  
+ dropout_3 (Dropout)         (None, 512)                  0         ['dense_6[0][0]']             
+                                                                                                  
+ dropout_2 (Dropout)         (None, 512)                  0         ['dense_4[0][0]']             
+                                                                                                  
+ dense_7 (Dense)             (None, 72)                   36936     ['dropout_3[0][0]']           
+                                                                                                  
+ dense_5 (Dense)             (None, 72)                   36936     ['dropout_2[0][0]']           
+                                                                                                  
+ add_1 (Add)                 (None, 72)                   0         ['dense_7[0][0]',             
+                                                                     'dense_5[0][0]']             
+                                                                                                  
+==================================================================================================
+Total params: 148624 (580.56 KB)
+Trainable params: 148624 (580.56 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

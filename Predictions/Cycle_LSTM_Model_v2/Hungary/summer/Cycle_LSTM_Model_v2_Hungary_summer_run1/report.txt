@@ -1,0 +1,4 @@
+Model: Cycle_LSTM_Model_v2
+Country/Season: HU/summer
+Context last value: 60.00 | Forecast first: 3.08 | last: 2.31
+Forecast mean±std: 1.40 ± 0.77

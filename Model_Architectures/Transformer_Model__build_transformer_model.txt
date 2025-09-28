@@ -1,0 +1,78 @@
+Model: "model_76"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_72 (InputLayer)       [(None, 72, 1)]              0         []                            
+                                                                                                  
+ layer_normalization_140 (L  (None, 72, 1)                2         ['input_72[0][0]']            
+ ayerNormalization)                                                                               
+                                                                                                  
+ multi_head_attention_50 (M  (None, 72, 1)                1793      ['layer_normalization_140[0][0
+ ultiHeadAttention)                                                 ]',                           
+                                                                     'layer_normalization_140[0][0
+                                                                    ]']                           
+                                                                                                  
+ dropout_280 (Dropout)       (None, 72, 1)                0         ['multi_head_attention_50[0][0
+                                                                    ]']                           
+                                                                                                  
+ tf.__operators__.add_96 (T  (None, 72, 1)                0         ['dropout_280[0][0]',         
+ FOpLambda)                                                          'input_72[0][0]']            
+                                                                                                  
+ layer_normalization_141 (L  (None, 72, 1)                2         ['tf.__operators__.add_96[0][0
+ ayerNormalization)                                                 ]']                           
+                                                                                                  
+ dense_408 (Dense)           (None, 72, 4)                8         ['layer_normalization_141[0][0
+                                                                    ]']                           
+                                                                                                  
+ dropout_281 (Dropout)       (None, 72, 4)                0         ['dense_408[0][0]']           
+                                                                                                  
+ dense_409 (Dense)           (None, 72, 1)                5         ['dropout_281[0][0]']         
+                                                                                                  
+ tf.__operators__.add_97 (T  (None, 72, 1)                0         ['dense_409[0][0]',           
+ FOpLambda)                                                          'tf.__operators__.add_96[0][0
+                                                                    ]']                           
+                                                                                                  
+ layer_normalization_142 (L  (None, 72, 1)                2         ['tf.__operators__.add_97[0][0
+ ayerNormalization)                                                 ]']                           
+                                                                                                  
+ multi_head_attention_51 (M  (None, 72, 1)                1793      ['layer_normalization_142[0][0
+ ultiHeadAttention)                                                 ]',                           
+                                                                     'layer_normalization_142[0][0
+                                                                    ]']                           
+                                                                                                  
+ dropout_282 (Dropout)       (None, 72, 1)                0         ['multi_head_attention_51[0][0
+                                                                    ]']                           
+                                                                                                  
+ tf.__operators__.add_98 (T  (None, 72, 1)                0         ['dropout_282[0][0]',         
+ FOpLambda)                                                          'tf.__operators__.add_97[0][0
+                                                                    ]']                           
+                                                                                                  
+ layer_normalization_143 (L  (None, 72, 1)                2         ['tf.__operators__.add_98[0][0
+ ayerNormalization)                                                 ]']                           
+                                                                                                  
+ dense_410 (Dense)           (None, 72, 4)                8         ['layer_normalization_143[0][0
+                                                                    ]']                           
+                                                                                                  
+ dropout_283 (Dropout)       (None, 72, 4)                0         ['dense_410[0][0]']           
+                                                                                                  
+ dense_411 (Dense)           (None, 72, 1)                5         ['dropout_283[0][0]']         
+                                                                                                  
+ tf.__operators__.add_99 (T  (None, 72, 1)                0         ['dense_411[0][0]',           
+ FOpLambda)                                                          'tf.__operators__.add_98[0][0
+                                                                    ]']                           
+                                                                                                  
+ global_average_pooling1d_4  (None, 72)                   0         ['tf.__operators__.add_99[0][0
+ 3 (GlobalAveragePooling1D)                                         ]']                           
+                                                                                                  
+ dense_412 (Dense)           (None, 64)                   4672      ['global_average_pooling1d_43[
+                                                                    0][0]']                       
+                                                                                                  
+ dropout_284 (Dropout)       (None, 64)                   0         ['dense_412[0][0]']           
+                                                                                                  
+ dense_413 (Dense)           (None, 72)                   4680      ['dropout_284[0][0]']         
+                                                                                                  
+==================================================================================================
+Total params: 12972 (50.67 KB)
+Trainable params: 12972 (50.67 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________

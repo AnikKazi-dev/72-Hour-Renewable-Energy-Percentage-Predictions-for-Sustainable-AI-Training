@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Robust_Improved_Hybrid_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Robust_Improved_Hybrid_Model_v2\\Germany\\winter\\training_loss_plot_winter_robust_improved_hybrid_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Robust_Improved_Hybrid_Model_v2\\Germany\\winter\\forecast_examples_winter_robust_improved_hybrid_v2.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 11.64014780355372,
+    "mse": 218.8573437146784,
+    "rmse": 14.793827892559735,
+    "mape": 0.2569552551581662
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Robust_Improved_Hybrid_Model_v2\\Germany\\winter\\Robust_Improved_Hybrid_Model_v2_Germany_winter_run1_emissions.csv"
+}

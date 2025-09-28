@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Hybrid_CNN_CycleLSTM_Attention_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Hybrid_CNN_CycleLSTM_Attention_Model_v3\\Denmark\\summer\\training_loss_plot_summer_hybrid_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Hybrid_CNN_CycleLSTM_Attention_Model_v3\\Denmark\\summer\\forecast_examples_summer_hybrid_v3.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 7.2147561964657765,
+    "mse": 76.73930562421945,
+    "rmse": 8.76009735243961,
+    "mape": 0.08595062661235783
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Hybrid_CNN_CycleLSTM_Attention_Model_v3\\Denmark\\summer\\Hybrid_CNN_CycleLSTM_Attention_Model_v3_Denmark_summer_run1_emissions.csv"
+}

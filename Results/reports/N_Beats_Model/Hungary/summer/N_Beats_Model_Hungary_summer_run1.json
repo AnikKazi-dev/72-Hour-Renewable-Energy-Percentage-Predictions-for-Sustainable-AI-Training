@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\N_Beats_Model.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\N_Beats_Model\\Hungary\\summer\\training_loss_plot_summer_nbeats.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\N_Beats_Model\\Hungary\\summer\\forecast_examples_summer_nbeats.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 5.272138487437879,
+    "mse": 48.62907586920977,
+    "rmse": 6.973455088348227,
+    "mape": 0.20344443208146595
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\N_Beats_Model\\Hungary\\summer\\N_Beats_Model_Hungary_summer_run1_emissions.csv"
+}

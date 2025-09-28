@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\CNN_LSTM_Model.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CNN_LSTM_Model\\Spain\\winter\\training_loss_plot_winter_cnnlstm.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\CNN_LSTM_Model\\Spain\\winter\\forecast_examples_winter_cnnlstm.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 7.125487955487274,
+    "mse": 85.53350223316161,
+    "rmse": 9.248432420316517,
+    "mape": 0.14459040173805482
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\CNN_LSTM_Model\\Spain\\winter\\CNN_LSTM_Model_Spain_winter_run1_emissions.csv"
+}

@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Autoformer_Model.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Autoformer_Model\\Spain\\winter\\training_loss_plot_winter_autoformer.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Autoformer_Model\\Spain\\winter\\forecast_examples_winter_autoformer.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 9.203731195993255,
+    "mse": 132.80878238501117,
+    "rmse": 11.524269277703084,
+    "mape": 0.18840066987348336
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Autoformer_Model\\Spain\\winter\\Autoformer_Model_Spain_winter_run1_emissions.csv"
+}

@@ -1,0 +1,4 @@
+Model: DLinear_Model_v2
+Country/Season: HU/winter
+Context last value: 14.00 | Forecast first: 13.15 | last: 8.17
+Forecast mean±std: 18.58 ± 11.11

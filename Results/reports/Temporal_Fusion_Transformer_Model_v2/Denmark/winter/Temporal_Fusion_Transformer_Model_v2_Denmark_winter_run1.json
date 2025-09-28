@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\Temporal_Fusion_Transformer_Model_v2.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Temporal_Fusion_Transformer_Model_v2\\Denmark\\winter\\training_loss_plot_winter_tft_v2.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\Temporal_Fusion_Transformer_Model_v2\\Denmark\\winter\\forecast_examples_winter_tft_v2.png"
+  ],
+  "season": "winter",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 9.821322673349288,
+    "mse": 156.3537408917317,
+    "rmse": 12.50414894711878,
+    "mape": 0.1388129233013127
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\Temporal_Fusion_Transformer_Model_v2\\Denmark\\winter\\Temporal_Fusion_Transformer_Model_v2_Denmark_winter_run1_emissions.csv"
+}

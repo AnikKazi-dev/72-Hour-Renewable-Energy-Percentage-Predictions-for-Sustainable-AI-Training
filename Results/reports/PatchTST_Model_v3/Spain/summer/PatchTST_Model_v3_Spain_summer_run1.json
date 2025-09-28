@@ -1,0 +1,16 @@
+{
+  "entry": "Models\\PatchTST_Model_v3.py",
+  "images": [
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\PatchTST_Model_v3\\Spain\\summer\\training_loss_plot_summer_patchtst_v3.png",
+    "C:\\Users\\anikk\\BioNet\\to py\\Results\\images\\PatchTST_Model_v3\\Spain\\summer\\forecast_examples_summer_patchtst_v3.png"
+  ],
+  "season": "summer",
+  "cwd": "C:\\Users\\anikk\\BioNet\\to py",
+  "metrics": {
+    "mae": 9.191725235871019,
+    "mse": 116.08308731389617,
+    "rmse": 10.774186155524516,
+    "mape": 0.1678097798951804
+  },
+  "emissions_csv": "C:\\Users\\anikk\\BioNet\\to py\\Results\\emissions\\PatchTST_Model_v3\\Spain\\summer\\PatchTST_Model_v3_Spain_summer_run1_emissions.csv"
+}
